@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .page-track {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .required-hint {
+            color: #b50000;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .form-wrapper {
+            background-color: #e9e9e9;
+            border: 1px solid #c8c8c8;
+            max-width: 640px;
+            padding: 25px 40px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #d21515;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 8px 14px;
+            margin-bottom: 16px;
+        }
+
+        label {
+            font-size: 14px;
+            align-self: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            padding: 6px;
+            border: 1px solid #b6b6b6;
+            border-radius: 2px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .inline-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+            font-size: 14px;
+        }
+
+        .inline-group label {
+            margin-right: 4px;
+            align-self: center;
+        }
+
+        .small-field {
+            max-width: 160px;
+        }
+
+        .checkbox-list,
+        .radio-list {
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #d6d6d6;
+            border: 1px solid #a5a5a5;
+            padding: 6px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0c0c0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #c2c2c2;
+            margin: 24px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="required-hint">* - Denotes Required Information</div>
+    <div class="page-track">&gt; 1 Donation &nbsp;&nbsp;&gt; 2 Confirmation &nbsp;&nbsp;&gt; Thank You!</div>
+
+    <div class="form-wrapper">
+        <form>
+            <section>
+                <h2>Donor Information</h2>
+                <fieldset>
+                    <div class="form-grid">
+                        <label for="first-name">First Name*</label>
+                        <input id="first-name" name="first-name" type="text" required>
+
+                        <label for="last-name">Last Name*</label>
+                        <input id="last-name" name="last-name" type="text" required>
+
+                        <label for="company">Company</label>
+                        <input id="company" name="company" type="text">
+
+                        <label for="address1">Address 1*</label>
+                        <input id="address1" name="address1" type="text" required>
+
+                        <label for="address2">Address 2</label>
+                        <input id="address2" name="address2" type="text">
+
+                        <label for="city">City*</label>
+                        <input id="city" name="city" type="text" required>
+
+                        <label for="state">State*</label>
+                        <select id="state" name="state" required>
+                            <option value="">Select a State</option>
+                            <option>California</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>New Mexico</option>
+                            <option>New York</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+                        </select>
+
+                        <label for="zip">Zip Code*</label>
+                        <input id="zip" name="zip" type="text" required class="small-field">
+
+                        <label for="country">Country*</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select a Country</option>
+                            <option>Bangladesh</option>
+                            <option>India</option>
+                            <option>Pakistan</option>
+                            <option>Bhutan</option>
+                            <option>Maldives</option>
+                            <option>Nepal</option>
+                            <option>Sri Lanka</option>
+                            <option>Afghanistan</option>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>United Kingdom</option>
+                            <option>Australia</option>
+                            <option>China</option>
+                            <option>Japan</option>
+                            <option>Germany</option>
+                            <option>France</option>
+                            <option>Italy</option>
+                            <option>Spain</option>
+                            <option>Brazil</option>
+                            <option>South Africa</option>
+                            <option>Mexico</option>
+                            <option>Other</option>
+                        </select>
+
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel">
+
+                        <label for="fax">Fax</label>
+                        <input id="fax" name="fax" type="tel">
+
+                        <label for="email">Email*</label>
+                        <input id="email" name="email" type="email" required>
+                    </div>
+                </fieldset>
+
+                <div class="radio-list">
+                    <span>Donation Amount*</span>
+                    <div class="inline-group">
+                        <label><input type="radio" name="amount" value="0" checked> None</label>
+                        <label><input type="radio" name="amount" value="50"> $50</label>
+                        <label><input type="radio" name="amount" value="75"> $75</label>
+                        <label><input type="radio" name="amount" value="100"> $100</label>
+                        <label><input type="radio" name="amount" value="250"> $250</label>
+                        <label><input type="radio" name="amount" value="other"> Other</label>
+                        <label>Other Amount $ <input type="text" name="amount-other" class="small-field"></label>
+                    </div>
+                </div>
+
+                <div class="inline-group">
+                    <label><input type="checkbox" name="recurring"> I am interested in giving on a regular basis.</label>
+                    <label>Monthly Credit Card $ <input type="text" name="monthly-amount" class="small-field"></label>
+                    <label>For <input type="text" name="monthly-months" class="small-field"> months</label>
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Honorarium and Memorial Donation Information</h2>
+                <div class="inline-group">
+                    <span>I would like to make this</span>
+                    <label><input type="radio" name="honor-type" value="honor"> To Honor</label>
+                    <label><input type="radio" name="honor-type" value="memory"> In Memory of</label>
+                </div>
+
+                <div class="inline-group" style="margin-top: 10px;">
+                    <span>Acknowledge donation to</span>
+                    <select name="acknowledge-title" class="small-field">
+                        <option value="">Select</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        <option>Dr.</option>
+                        <option>Prof.</option>
+                    </select>
+                </div>
+
+                <div class="form-grid" style="margin-top: 10px;">
+                    <label for="ack-name">Name</label>
+                    <input id="ack-name" name="ack-name" type="text">
+
+                    <label for="ack-address">Address</label>
+                    <input id="ack-address" name="ack-address" type="text">
+
+                    <label for="ack-city">City</label>
+                    <input id="ack-city" name="ack-city" type="text">
+
+                    <label for="ack-state">State</label>
+                    <select id="ack-state" name="ack-state">
+                            <option>California</option>
+                            <option>Florida</option>
+                            <option>Georgia</option>
+                            <option>Hawaii</option>
+                            <option>New Mexico</option>
+                            <option>New York</option>
+                            <option>Texas</option>
+                            <option>Washington</option>
+                    </select>
+
+                    <label for="ack-zip">Zip</label>
+                    <input id="ack-zip" name="ack-zip" type="text" class="small-field">
+                </div>
+            </section>
+
+            <hr>
+
+            <section>
+                <h2>Additional Information</h2>
+                <p>Please enter your name, company or organization as you would like it to appear in our publications:</p>
+
+                <div class="form-grid" style="margin-bottom: 10px;">
+                    <label for="public-name">Name</label>
+                    <input id="public-name" name="public-name" type="text">
+                </div>
+
+                <div class="checkbox-list">
+                    <label><input type="checkbox" name="anonymous"> I would like my gift to remain anonymous.</label> <br>
+                    <label><input type="checkbox" name="matching"> My employer offers a matching gift program. I will mail the matching gift form.</label> <br> 
+                    <label><input type="checkbox" name="no-mail"> Please save the cost of acknowledging this gift by not mailing a thank you letter.</label>
+                </div>
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" placeholder="Please enter any questions or feedback here"></textarea>
+
+                <div class="checkbox-list" style="margin-top: 16px;">
+                    <div style="margin-bottom: 5px;">
+                    <span style="margin-top: 10px;">How may we contact you?</span> <br>
+                    </div>
+                    <label><input type="checkbox" name="contact-email"> Email</label> <br>
+                    <label><input type="checkbox" name="contact-mail"> Postal Mail</label> <br>
+                    <label><input type="checkbox" name="contact-phone"> Telephone</label> <br>
+                    <label><input type="checkbox" name="contact-fax"> Fax</label>
+                </div>
+
+                <div class="checkbox-list">
+                    <div style="margin-bottom: 5px;">
+                        <span>I would like to receive newsletters and information about special events by:</span> <br>
+                    </div>
+                    <label><input type="checkbox" name="info-email"> Email</label> <br>
+                    <label><input type="checkbox" name="info-mail"> Postal Mail</label>
+                </div>
+
+                <div class="checkbox-list">
+                    <label><input type="checkbox" name="volunteer"> I would like information about volunteering with the organization.</label>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="reset">Reset</button>
+                <button type="submit">Continue</button>
+            </div>
+        </form>
+    </div>
+
+    <p style="font-size: 12px; margin-top: 18px; color: #505050;">
+        Donate online with confidence. You are on a secure server. If you have any problems or questions, please contact support.
+    </p>
+</body>
+</html>
