@@ -2,6 +2,8 @@
 
 This repository contains the solution for the first Web Technologies lab task. The goal is to practice core HTML tags by recreating the layout of a donation/registration form.
 
+### Live View: https://r3gistrati0n.netlify.app/
+
 ## Project Structure
 
 - `registration.html` – main submission replicating the multi-section donation form with donor, honorarium, and additional information panels.
